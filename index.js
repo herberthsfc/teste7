@@ -201,9 +201,10 @@ client.on('group-participants-update', async (anu) => {
 			}
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
-			}
+            }
+        }
 
-		if (messagesC.includes("://chat.whatsapp.com/")){
+        if (messagesC.includes("://chat.whatsapp.com/")){
 		if (!isGroup) return
 		if (!isAntiLink) return
 		if (isGroupAdmins) return reply('porque você é um administrador de grupo, bot não vou te chutar ')
@@ -216,27 +217,26 @@ client.on('group-participants-update', async (anu) => {
 		}, 5000)
 		setTimeout( () => {
 			nzwa.updatePresence(from, Presence.composing)
-			reply("1")
+			reply("1 segundo")
 		}, 4000)
 		setTimeout( () => {
 			nzwa.updatePresence(from, Presence.composing)
-			reply("2")
+			reply("2 segundos")
 		}, 3000)
 		setTimeout( () => {
 			nzwa.updatePresence(from, Presence.composing)
-			reply("3")
+			reply("3 segundos")
 		}, 2000)
 		setTimeout( () => {
 			nzwa.updatePresence(from, Presence.composing)
-			reply("4")
+			reply("4 segundos")
 		}, 1000)
 		setTimeout( () => {
 			nzwa.updatePresence(from, Presence.composing)
-			reply("5")
+			reply("5segundo")
 		}, 0)
 	}
-
-			colors = ['red','white','black','blue','yellow','green']
+            colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 			const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
@@ -245,6 +245,7 @@ client.on('group-participants-update', async (anu) => {
 			if (!isGroup && !isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
+
 			switch(command) {
 				case 'helrygf': 
 				case 'menjfdh':
